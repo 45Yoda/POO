@@ -1,5 +1,5 @@
 package Ficha4;
-
+import java.util.Arrays;
 
 public class GrowingArray
 {
@@ -22,4 +22,62 @@ public class GrowingArray
        else return null;
     }
     
+   public void add(Veiculo v){
+       if (!contains(v) && this.capacidade_inicial < size){
+           elemento[size++]=v.clone();
+    }
+   }
+   
+   public void add(int indice,Veiculo v){
+       this.size++;
+       elemento[this.size]=elemento[indice];
+       if(!contains(v) && this.capacidade_inicial < size){
+           elemento[indice] = v.clone();
+        }
+    }
+   //set
+    public void set(int indice,Veiculo v){
+   
+   }
+   //remove 
+   //public Veiculo remove(int indice){
+   // }
+    
+   //remove
+   public boolean remove(Veiculo v){
+    }
+    
+   public int size(){
+       return this.elemento.length;
+    }
+    
+   public int indexOf(Veiculo v){
+       int x = 0;
+       for(int i=0;i<elemento.length && x==0;i++){
+           if(elemento[i].equals(v)){x=i;}
+        }
+        
+        return x;
+    }
+   
+   public boolean contains(Veiculo v){
+       int i;
+       boolean r=false;
+       for(i=0;i<size && !r;i++){
+           if(elemento[i].equals(v)){r=true;}
+        }
+       
+        return r;
+    }
+    
+   public boolean isEmpty(){
+       return elemento.equals(null);
+    }
+    
+   private void aumentaArray(int tamanho){
+       if(tamanho> 0.8 * this.elemento.length){
+           int nova_capacidade = (int)(this.elemento.length * 2);
+           this.elemento = Arrays.copyOf(this.elemento,nova_capacidade);
+       }
+    }
 }
