@@ -17,4 +17,6 @@ comment7.params=faixas
 comment7.target=void\ adicionar(java.util.List)
 comment8.params=faixas
 comment8.target=void\ adicionaF(java.util.List)
-numComments=9
+comment9.params=f
+comment9.target=int\ classificacaoSuperiorF(Faixa)
+numComments=10

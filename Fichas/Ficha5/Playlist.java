@@ -61,4 +61,11 @@ public class Playlist
   public void adicionaF (List<Faixa> faixas){
       faixas.forEach(f->{this.faixas.add(f.clone());});
     }
+  
+  public int classificacaoSuperiorF(Faixa f){
+      return (int) this.faixas.stream()
+                   .filter(t->t.getClassificacao()>f.getClassificacao())
+                   .count();
+  }
+  
 }
