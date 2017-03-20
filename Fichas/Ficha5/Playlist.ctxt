@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=f
+comment0.target=Playlist(java.util.List)
+comment1.params=
+comment1.target=Playlist()
+comment2.params=p
+comment2.target=Playlist(Playlist)
+comment3.params=
+comment3.target=java.util.List\ getFaixas()
+comment4.params=
+comment4.target=java.util.List\ getFaixas2()
+comment5.params=faixas
+comment5.target=void\ setFaixas(java.util.List)
+comment6.params=
+comment6.target=int\ numFaixas()
+comment7.params=faixas
+comment7.target=void\ adicionar(java.util.List)
+comment8.params=faixas
+comment8.target=void\ adicionaF(java.util.List)
+numComments=9

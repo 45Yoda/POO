@@ -168,8 +168,7 @@ public class Stand {
         if(o==null || this.getClass() != o.getClass()) return false;
         else{
             Stand s = (Stand) o;
-            return  
-      s.getNomeStand().equals(nomeStand) &&
+            return s.getNomeStand().equals(nomeStand) &&
                    s.getCarros().equals(carros) &&
                    s.getCapacidade()==capacidade &&
                    s.getNVeiculos()==nveiculos;
