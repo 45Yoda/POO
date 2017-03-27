@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Parque()
+comment1.params=n\ p
+comment1.target=Parque(java.lang.String,\ java.util.Map)
+comment2.params=p
+comment2.target=Parque(Parque)
+comment3.params=
+comment3.target=java.lang.String\ getNome()
+comment4.params=
+comment4.target=java.util.Map\ getLugares()
+comment5.params=
+comment5.target=java.util.Map\ getLugares2()
+numComments=6
