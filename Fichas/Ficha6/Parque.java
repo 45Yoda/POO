@@ -47,12 +47,11 @@ public class Parque
   
   //novolugar 
   public Map<String,Lugar> novolugar(Lugar l){
-    
+    this.lugares.put(l.getMat(),l);
+    return lugares;
     }
   //remove
-  public Map<String,Lugar> remove(String matricula){
-    
-    }
+  //public Map<String,Lugar> remove(String matricula){}
   
   
   public void alteraTempo(String m){
@@ -63,11 +62,11 @@ public class Parque
   }
   
   public int quantidadeMinutos(){
-      this.lugares.values().stream().mapToInt(l->l.getMin()).sum();
+      return this.lugares.values().stream().mapToInt(l->l.getMin()).sum();
   }
   
-  public void alteraTemp(){
-      Lugar l = this.lugares;
+  public void alteraTemp(String m,int min){
+      Lugar l = this.lugares.get(m);
       this.lugares.remove(m);
       l.setMin(minutos);
       novolugar(l);
@@ -75,8 +74,9 @@ public class Parque
   
   public List<String> matriculaTempo(int x){
       return this.lugares.values().stream()
-             .filter(l->l.getMin()>x && l.getPerm())
-             .map(Lugar :: getMatricula)
-             .collect(Collectors.toList());
-    }
+      .filter(l->l.getMin()>x && l.getPerm())
+      .map(Lugar :: getMat)
+      .collect(Collectors.toList());
+  }
+     
 }

@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.params=nome\ autor\ duracao\ classificacao
+comment0.target=Faixa(java.lang.String,\ java.lang.String,\ double,\ int)
+comment1.params=
+comment1.target=Faixa()
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment11.params=f
+comment11.target=int\ compareTo(ExemploPlaylist.Faixa)
+comment11.text=\r\n\ Implementa\u00E7\u00E3o\ do\ m\u00E9todo\ de\ ordem\ natural\ de\ Faixa.\r\n\ Esta\ defini\u00E7\u00E3o\ ordena\ as\ faixas\ por\ ordem\ alfab\u00E9tica\ do\ seu\ nome\ (t\u00EDtulo).\r\n
+comment2.params=f
+comment2.target=Faixa(ExemploPlaylist.Faixa)
+comment3.params=
+comment3.target=java.lang.String\ getNome()
+comment4.params=
+comment4.target=java.lang.String\ getAutor()
+comment5.params=
+comment5.target=double\ getDuracao()
+comment6.params=
+comment6.target=int\ getClassificacao()
+comment7.params=classificacao
+comment7.target=void\ setClassificacao(int)
+comment8.params=o
+comment8.target=boolean\ equals(java.lang.Object)
+comment9.params=
+comment9.target=ExemploPlaylist.Faixa\ clone()
+numComments=12
