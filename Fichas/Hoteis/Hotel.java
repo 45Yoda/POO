@@ -1,6 +1,6 @@
 package Hoteis;
 
-public class Hotel {
+public abstract class Hotel {
     private String codigo;
     private String nome;
     private String localidade;
@@ -31,6 +31,8 @@ public class Hotel {
         this.precoQuarto = precoQuarto;
         this.numeroQuartos = numQuartos;
     }
+    
+    public abstract double precoQuarto();
     
     public String getCodigo() {
         return codigo;
@@ -73,9 +75,7 @@ public class Hotel {
         return this.numeroQuartos; 
     }
     
-    public Hotel clone(){
-        return new Hotel(this);
-    }
+    public abstract Hotel clone();
 
     public boolean equals(Object obj) {
         if(obj == this) {

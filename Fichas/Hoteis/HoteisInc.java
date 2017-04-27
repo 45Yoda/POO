@@ -11,7 +11,9 @@ import static java.util.stream.Collectors.toMap;
 public class HoteisInc
 {
     private String nome;
+    
     private Map<String,Hotel> hoteis;
+    
     
     public HoteisInc(){
         this.nome=" ";
@@ -23,66 +25,85 @@ public class HoteisInc
         this.hoteis = c.getHoteis();
     }
     
-    public HoteisInc(String nome,Map<String,Hotel> htls){
-        this.hoteis = new HashMap<>();
-        
-        for(Hotel h: htls.values())
-            this.hoteis.put(h.getCodigo(),h.clone());
-        
-        //return this.hoteis= htls.entrySet()/*set<MapEntry<k,v>>*/.stream()
-        //.collect(Collectors.toMap(e->e.getKey(),e->e.getValue().clone()));
-                           
+    public HoteisInc(String nome, Map<String,Hotel> hoteis){
+        this.nome = nome;
+        this.hoteis = new HashMap<String,Hotel>();
+        setHoteis(hoteis);
     }
-        
+    
     public String getNome(){
-        return this.nome;
+        return nome;
     }
     
-    public int quantos(){
-        return this.hoteis.size();
-   }
-    
-    public int quantosT(String loc){
-        /*
-        return (int) this.hoteis.values()
-                                .stream()
-                                .filter(h->h.getLocalidade().equals(loc))
-                                .count();
-        `*/
-        
-        int t=0;
-        for(Hotel h:this.hoteis.values())
-            if (h.getLocalidade().equals(loc))
-            t++;
-        
-            return  t;
-    }
-    
-    
-    public Map<String,Hotel> getHoteis(){
+    private Map<String,Hotel> getHoteis(){
         return this.hoteis.entrySet()
                           .stream()
-                          .collect(toMap(e->e.getKey(), e->e.getValue().clone()));
+                          .collect(toMap(e->e.getKey(),e->e.getValue().clone()));    
+    }
+    
+    private void setHoteis(Map<String,Hotel> hoteis){
+        this.hoteis = hoteis.entrySet()
+                            .stream()
+                            .collect(toMap(e->e.getKey(),e->e.getValue().clone()));
+    
+    }
+    
+    public boolean existeHotel(String cod){
+        return this.hoteis.containsKey(cod);    
+    }
+   
+    public int quantos(){
+        return this.hoteis.size();
+    }
+    
+    public int quantos(String loc){
+        return (int) this.hoteis.values().stream().filter(h->h.getLocalidade().equals(loc)).count();
+    }
+    
+    
+    public int quantosT(String tipo){
+        int total = 0;
+        
+        for(Hotel h: this.hoteis.values()){
+            if (h.getClass().getSimpleName().equals(tipo))
+            total++;
+        }
+        
+        return total;
+     }
+    
+    public Hotel getHotel(String cod){
+        return this.hoteis.get(cod);
     }
     
     public void adiciona(Hotel h) {
         this.hoteis.put(h.getCodigo(),h);
     }
     
-    /*public HoteisInc2(String nome,Map<String,Hotel> htls){
-        this.hoteis= htls.entrySet().stream().collect(Collectors.toMap(e->e.getKey(),e->e.getValue().clone()));
-                         //set<MapEntry<k,v>>   
-    }*/
+    public long total100(){
+        long total = 0;
+        for (Hotel h: this.hoteis.values()){
+            total += h.getPrecoQuarto()*h.getNumeroQuartos();
+        }
+        return total;
+    }
     
+    public HoteisInc clone(){
+        return new HoteisInc(this);
+    }
+    
+    public List<Hotel> getHoteis2(){
+        return new ArrayList<Hotel>(this.hoteis.values());
+    }
     
     public void adiciona(Set<Hotel> hs){
-        for( Hotel h: hs){
+        for (Hotel h: hs){
             this.hoteis.put(h.getCodigo(),h);
         }
     }
     
     public void mudaPara(String epoca){
-        for(Hotel h: this.hoteis.values()){
+        for (Hotel h: this.hoteis.values()){
             if (h.getClass().getSimpleName().equals("HotelStandard")){
                 if(epoca.equals("true")){
                     ((HotelStandard) h).setEpocaAlta(true);
@@ -90,10 +111,6 @@ public class HoteisInc
                 else ((HotelStandard) h).setEpocaAlta(false);
             }
         }
-    }
-    
-     public HoteisInc clone() {
-        return new HoteisInc(this);
     }
     
      public boolean equals(Object obj) {
