@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Ponto2DComparator
+comment1.params=p1\ p2
+comment1.target=int\ compare(Ponto2D,\ Ponto2D)
+comment1.text=\ \r\n\ Implementa\uFFFD\uFFFDo\ do\ m\uFFFDtodo\ compare\ de\ Ponto2D.\r\n\ \r\n\ Nota\:\ a\ implementa\uFFFD\uFFFDo\ utilizada\ \uFFFD\ apenas\ uma\ das\ v\uFFFDrias\r\n\ formas\ que\ poderiamos\ ter\ de\ comparar\ Ponto2D.\r\n\ \r\n
+numComments=2

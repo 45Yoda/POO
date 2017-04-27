@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=TabuleiroApostas
+comment1.params=
+comment1.target=TabuleiroApostas()
+comment1.text=\r\n\ Construtor\ por\ omiss\uFFFDo.\r\n\ Apenas\ cria\ o\ objecto\ TreeMap,\ mas\ deve\ parametrizar\ o\ Map\ com\ a\ capacidade\r\n\ de\ comparar\ as\ chaves,\ que\ neste\ caso\ s\uFFFDo\ Ponto2D.\r\n\ Caso\ n\uFFFDo\ fosse\ passado\ o\ comparador\ de\ Ponto2D\ n\uFFFDo\ seria\ poss\uFFFDvel\ inserir\ mais\ do\r\n\ que\ um\ Ponto2D.\r\n
+comment2.params=infoApostas
+comment2.target=TabuleiroApostas(java.util.Map)
+comment2.text=\r\n\ Construtor\ que\ aceita\ como\ par\uFFFDmetro\ um\ Map\ com\ rela\uFFFD\uFFFDes\ j\uFFFD\ preenchidas.\r\n
+comment3.params=tab
+comment3.target=TabuleiroApostas(TabuleiroApostas)
+comment3.text=\r\n\ Construtor\ de\ c\uFFFDpia.\r\n
+comment4.params=
+comment4.target=java.util.TreeMap\ getApostas()
+comment5.params=p\ apostador
+comment5.target=void\ insereApostador(Ponto2D,\ java.lang.String)
+comment5.text=\r\n\ M\uFFFDtodo\ que\ insere\ mais\ um\ nome\ de\ apostador\ num\ determinado\ ponto.\r\n\ Se\ o\ ponto\ fornecido\ n\uFFFDo\ existir\ no\ TreeMap,\ cria\ uma\ nova\ rela\uFFFD\uFFFDo\ no\ TreeMap.\r\n\ Caso\ contr\uFFFDrio\ acrescenta\ \uFFFD\ lista\ de\ apostadores.\r\n
+comment6.params=p
+comment6.target=boolean\ existePonto(Ponto2D)
+comment6.text=\r\n\ Determinar\ se\ o\ ponto\ existe.\r\n\ \r\n
+comment7.params=p
+comment7.target=int\ qtApostadoresPorPonto(Ponto2D)
+comment7.text=\ \r\n\ Determinar\ quantos\ apostadores\ est\uFFFDo\ associados\ a\ um\ ponto.\r\n\ Tem\ como\ pr\uFFFD-condi\uFFFD\uFFFDo\ que\ o\ ponto\ exista\ (ver\ m\uFFFDtodo\ existePonto(Ponto2D)).\r\n
+numComments=8

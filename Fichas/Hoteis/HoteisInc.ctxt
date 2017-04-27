@@ -1,0 +1,30 @@
+#BlueJ class context
+comment0.target=HoteisInc
+comment1.params=
+comment1.target=HoteisInc()
+comment10.params=epoca
+comment10.target=void\ mudaPara(java.lang.String)
+comment11.params=
+comment11.target=HoteisInc\ clone()
+comment12.params=obj
+comment12.target=boolean\ equals(java.lang.Object)
+comment13.params=
+comment13.target=java.lang.String\ toString()
+comment2.params=c
+comment2.target=HoteisInc(HoteisInc)
+comment3.params=nome\ htls
+comment3.target=HoteisInc(java.lang.String,\ java.util.Map)
+comment4.params=
+comment4.target=java.lang.String\ getNome()
+comment5.params=
+comment5.target=int\ quantos()
+comment6.params=loc
+comment6.target=int\ quantosT(java.lang.String)
+comment7.params=
+comment7.target=java.util.Map\ getHoteis()
+comment8.params=h
+comment8.target=void\ adiciona(Hotel)
+comment9.params=hs
+comment9.target=void\ adiciona(java.util.Set)
+comment9.text=public\ HoteisInc2(String\ nome,Map<String,Hotel>\ htls){\r\n\ \ \ \ \ \ \ \ this.hoteis\=\ htls.entrySet().stream().collect(Collectors.toMap(e->e.getKey(),e->e.getValue().clone()));\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //set<MapEntry<k,v>>\ \ \ \r\n}
+numComments=14
