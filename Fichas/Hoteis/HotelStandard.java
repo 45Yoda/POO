@@ -1,7 +1,8 @@
 package Hoteis;
-public class HotelStandard extends Hotel {
+public class HotelStandard extends Hotel implements CartaoPontos{
 
     private boolean epocaAlta;
+    private int pontos;
     
     public HotelStandard() {
         super();
@@ -53,5 +54,12 @@ public class HotelStandard extends Hotel {
         sb.append("Preço final: ").append(precoQuarto()).append("€");        
         return sb.toString();
     }
+    
+    public void setPontosEuro(int pontos){
+        this.pontos = pontos;
+    }
 
+    public int getPontosEuro(){
+        return this.pontos;
+    }
 }

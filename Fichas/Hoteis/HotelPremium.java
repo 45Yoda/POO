@@ -1,7 +1,9 @@
 package Hoteis;
 
-public class HotelPremium extends Hotel{
+public class HotelPremium extends Hotel implements CartaoPontos{
+   
    private double taxa;
+   private int pontos;
    
    
    public HotelPremium(){
@@ -51,5 +53,13 @@ public class HotelPremium extends Hotel{
       sb.append(super.toString()).append("\n");
       sb.append("Taxa: ").append(taxa).append("%");
       return sb.toString();
-    }
+  }
+  
+  public void setPontosEuro(int pontos){
+      this.pontos = pontos;
+  }
+  
+  public int getPontosEuro(){
+      return this.pontos;
+  }
 }

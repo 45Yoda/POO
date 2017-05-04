@@ -2,6 +2,10 @@
 comment0.target=HotelStandard
 comment1.params=
 comment1.target=HotelStandard()
+comment10.params=pontos
+comment10.target=void\ setPontosEuro(int)
+comment11.params=
+comment11.target=int\ getPontosEuro()
 comment2.params=c
 comment2.target=HotelStandard(HotelStandard)
 comment3.params=codigo\ nome\ localidade\ precoQuarto\ epocaAlta\ nquartos
@@ -18,4 +22,4 @@ comment8.params=obj
 comment8.target=boolean\ equals(java.lang.Object)
 comment9.params=
 comment9.target=java.lang.String\ toString()
-numComments=10
+numComments=12

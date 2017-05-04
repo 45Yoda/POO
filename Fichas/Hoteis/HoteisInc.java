@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.Iterator;
+import java.util.Comparator;
 import static java.util.stream.Collectors.toMap;
 
 
@@ -72,8 +74,19 @@ public class HoteisInc
         return total;
      }
     
-    public Hotel getHotel(String cod){
+     /*
+    public Hotel getHotel(String cod) throws HotelNaoExisteException{
+        if(!hoteis.containsKey(cod)) throw new HotelNaoExisteException("Hotel "+cod+ " não existe!");
         return this.hoteis.get(cod);
+    }*/
+    
+    public Hotel getHotel(String cod) throws HotelNaoExisteException{
+        try{
+            return hoteis.get(cod).clone();
+        }
+        catch(NullPointerException e){
+            throw new HotelNaoExisteException("Hotel " +cod+ " não existe!");
+        }
     }
     
     public void adiciona(Hotel h) {
@@ -132,4 +145,46 @@ public class HoteisInc
         sb.append(")");
         return sb.toString();
     }
+    
+    /*
+    public Iterator<Hotel> ordenarHoteis(String criterio){
+        TreeSet<Hotel> aux = new TreeSet<Hotel>(getCriterio(criterio));
+        for(Hotel h: this.hoteis.values()){
+            aux.add(h.clone());
+        }
+        return aux.iterator();
+    }
+    
+    public Comparator<Hotel> getCriterio(String s){
+        return ;
+    }
+    
+    public void addCriterio(String s, Comparator<Hotel> c){
+        this.ordenacao.put(s,c);
+    }
+    
+    public TreeSet<Hotel> ordenaHoteis(){
+        TreeSet<Hotel> hs = new TreeSet<Hotel>(ComparadorPreco());
+        
+        for(Hotel h: this.hoteis.values()){
+            hs.add(h.clone());
+        }
+        
+        return hs;
+    }
+    */
+    
+    
+    public List<CartaoPontos> daoPontos(){
+        ArrayList<CartaoPontos> l = new ArrayList<CartaoPontos>();
+        for(Hotel h: this.hoteis.values()) {
+            if((h instanceof HotelStandard) || (h instanceof HotelPremium)){
+                CartaoPontos cp = (CartaoPontos) h;
+                l.add(cp);
+            }
+        }
+        return l;
+    }
+    
+    
 }
