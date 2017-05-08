@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=HotelExisteException
+comment1.params=msg
+comment1.target=HotelExisteException(java.lang.String)
+numComments=2

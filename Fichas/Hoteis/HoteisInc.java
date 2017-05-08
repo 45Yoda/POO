@@ -89,8 +89,12 @@ public class HoteisInc
         }
     }
     
-    public void adiciona(Hotel h) {
-        this.hoteis.put(h.getCodigo(),h);
+    public void adiciona(Hotel h) throws HotelExisteException{
+        if(this.hoteis.containsKey(h.getCodigo()))
+            throw new HotelExisteException(h.getCodigo());
+        else{
+            this.hoteis.put(h.getCodigo(),h);
+        }
     }
     
     public long total100(){
