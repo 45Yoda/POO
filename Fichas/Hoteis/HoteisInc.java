@@ -8,9 +8,11 @@ import java.util.TreeSet;
 import java.util.Iterator;
 import java.util.Comparator;
 import static java.util.stream.Collectors.toMap;
+import java.io.Serializable;
+import java.io.*;
 
-
-public class HoteisInc
+ 
+public class HoteisInc implements Serializable
 {
     private String nome;
     
@@ -190,5 +192,17 @@ public class HoteisInc
         return l;
     }
     
+    public void gravaFich(String fich) throws IOException{
+        ObjectOutputStream ass = new ObjectOutputStream(new FileOutputStream (fich));
+        ass.writeObject(this);
+        ass.flush();
+        ass.close();
+    }
     
+    public void guardaFichTxt(String fich) throws IOException {
+        PrintWriter pw = new PrintWriter(fich);
+        pw.print(this);
+        pw.flush();
+        pw.close();
+    }
 }

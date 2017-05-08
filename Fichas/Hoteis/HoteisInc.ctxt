@@ -28,6 +28,10 @@ comment2.target=HoteisInc(HoteisInc)
 comment20.params=
 comment20.target=java.util.List\ daoPontos()
 comment20.text=\r\n\ \ \ \ public\ Iterator<Hotel>\ ordenarHoteis(String\ criterio){\r\n\ \ \ \ \ \ \ \ TreeSet<Hotel>\ aux\ \=\ new\ TreeSet<Hotel>(getCriterio(criterio));\r\n\ \ \ \ \ \ \ \ for(Hotel\ h\:\ this.hoteis.values()){\r\n\ \ \ \ \ \ \ \ \ \ \ \ aux.add(h.clone());\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ return\ aux.iterator();\r\n\ \ \ \ }\r\n\ \ \ \ \r\n\ \ \ \ public\ Comparator<Hotel>\ getCriterio(String\ s){\r\n\ \ \ \ \ \ \ \ return\ ;\r\n\ \ \ \ }\r\n\ \ \ \ \r\n\ \ \ \ public\ void\ addCriterio(String\ s,\ Comparator<Hotel>\ c){\r\n\ \ \ \ \ \ \ \ this.ordenacao.put(s,c);\r\n\ \ \ \ }\r\n\ \ \ \ \r\n\ \ \ \ public\ TreeSet<Hotel>\ ordenaHoteis(){\r\n\ \ \ \ \ \ \ \ TreeSet<Hotel>\ hs\ \=\ new\ TreeSet<Hotel>(ComparadorPreco());\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ for(Hotel\ h\:\ this.hoteis.values()){\r\n\ \ \ \ \ \ \ \ \ \ \ \ hs.add(h.clone());\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ return\ hs;\r\n\ \ \ \ }\r\n
+comment21.params=fich
+comment21.target=void\ gravaFich(java.lang.String)
+comment22.params=fich
+comment22.target=void\ guardaFichTxt(java.lang.String)
 comment3.params=nome\ hoteis
 comment3.target=HoteisInc(java.lang.String,\ java.util.Map)
 comment4.params=
@@ -42,4 +46,4 @@ comment8.params=
 comment8.target=int\ quantos()
 comment9.params=loc
 comment9.target=int\ quantos(java.lang.String)
-numComments=21
+numComments=23
