@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Normal()
+comment1.params=cod\ nome\ dias\ sal\ salario
+comment1.target=Normal(java.lang.String,\ java.lang.String,\ int,\ double,\ double)
+comment2.params=n
+comment2.target=Normal(Normal)
+comment3.params=
+comment3.target=void\ salario()
+comment4.params=
+comment4.target=Normal\ clone()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6

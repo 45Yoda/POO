@@ -1,16 +1,32 @@
 package Ficha3;
 
 
-
-public class Complexo
-{
+/**
+ * Write a description of class Complexo here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Complexo{
     private double a;
     private double b;
+
+    public Complexo(){
+        this.a = 0;
+        this.b = 0;
+    }
     
     public Complexo(double a, double b){
-        this.a=a;
-        this.b=b;
+        this.a = a;
+        this.b = b;
     }
+    
+    public Complexo(Complexo c){
+        this.a = c.getA();
+        this.b = c.getB();
+      
+    }
+    
     
     public double getA(){
         return this.a;
@@ -29,33 +45,34 @@ public class Complexo
     }
     
     public Complexo conjugado(){
-    //a + bi => a - bi
-    double a = this.getA();
-    double b = this.getB();
+        //a+bi = a-bi
+        double a = this.getA();
+        double b = this.getB();
     
-    return new Complexo (a, -b);
-    //return new Complexo(this.getA(),-this.getB());
-    
+        return new Complexo(a,-b);
     }
     
     public Complexo soma(Complexo comp){
-        double a = comp.getA();
-        double b = comp.getB();
         
-        double na = this.a + a;
-        double nb = this.b + b;
+        double a = this.getA();
+        double b = this.getB();
+        
+        double na = a+comp.getA();
+        double nb = b+comp.getB();
         
         return new Complexo(na,nb);
     }
     
-    public Complexo produto (Complexo comp){
-        double a = comp.getA();
-        double b = comp.getB();
+    public Complexo produto(Complexo comp){
+        
+        double a = this.getA();
+        double b = this.getB();
+    
         
         double na = this.a * a - this.b * b;
         double nb = this.b * a + this.a * b;
         
-        return new Complexo (na,nb);
+        return new Complexo(na,nb);
     }
     
     public Complexo reciproco(){
@@ -68,4 +85,21 @@ public class Complexo
         return new Complexo (na,-nb);
     }
     
+    public Complexo clone(){
+        return new Complexo(this);
+    }
+    
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append(a).append("\n");
+        sb.append(b).append("\n");
+        return sb.toString();
+    }
+    
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if(o == null || this.getClass() != o.getClass()) return false;
+        Complexo c = (Complexo) o;
+        return c.getA() == a && c.getB() == b;
+    }
 }

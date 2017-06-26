@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=arr1\ arr2\ arr3
+comment0.target=void\ printarr(java.lang.String[],\ int[],\ double[])
+comment1.params=
+comment1.target=int[]\ leVencimentos()
+comment2.params=
+comment2.target=java.lang.String[]\ leCargos()
+comment3.params=arr1\ arr2
+comment3.target=double[]\ beneficios(java.lang.String[],\ int[])
+comment4.params=
+comment4.target=void\ main()
+numComments=5

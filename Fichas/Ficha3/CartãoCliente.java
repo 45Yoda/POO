@@ -1,5 +1,12 @@
 package Ficha3;
 
+
+/**
+ * Write a description of class CartãoCliente here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
 public class CartãoCliente
 {
     private int pts;
@@ -8,7 +15,7 @@ public class CartãoCliente
     private String nome;
     private int valBon;
     
-    //Construtores
+      //Construtores
     
     public CartãoCliente(int pontos, int valor, String codigo, String nome, int valorBonus){
         this.pts=pontos;
@@ -47,10 +54,11 @@ public class CartãoCliente
     public void setCode(String code){this.code=code;}
     public void setNome(String nome){this.nome=nome;}
     public void setValBon(int valBon){this.valBon=valBon;}
-    
+   
     public void descontar(int menu){
-        if (menu == 1){ this.pts -= 10;}
-        else if (menu == 2){ this.pts -= 20;}
+        if(menu==1){this.pts -=10;}
+        else if(menu==2){this.pts -=20;}
+
     }
     
     public void descarregarPontos(CartãoCliente cartao){
@@ -60,6 +68,4 @@ public class CartãoCliente
     public void efectuarCompra (double valor){
         val += valor;
     }
-
-
 }

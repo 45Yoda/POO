@@ -1,5 +1,7 @@
 package Hoteis;
 
+apackage Hoteis;
+
 
 
 import static org.junit.Assert.*;

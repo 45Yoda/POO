@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CEO()
+comment1.params=cod\ n\ dias\ sal\ salario
+comment1.target=CEO(java.lang.String,\ java.lang.String,\ int,\ double,\ double)
+comment2.params=c
+comment2.target=CEO(CEO)
+comment3.params=
+comment3.target=double\ salario()
+comment4.params=
+comment4.target=CEO\ clone()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment6.params=o
+comment6.target=boolean\ equals(java.lang.Object)
+numComments=7

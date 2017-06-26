@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=cod
+comment0.target=boolean\ existeEmpregado(java.lang.String)
+comment1.params=cod
+comment1.target=Empregado\ getEmpregado(java.lang.String)
+comment2.params=e
+comment2.target=void\ addEmpregado(Empregado)
+comment3.params=h
+comment3.target=java.util.Iterator\ listaPorOrdemDecrescenteSalario(ComparadorSalario)
+comment4.params=
+comment4.target=EmpresaSet\ clone()
+numComments=5
