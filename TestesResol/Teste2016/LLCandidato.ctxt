@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=LLCandidato()
+comment1.params=
+comment1.target=int\ size()
+comment2.params=c
+comment2.target=void\ add(Candidato)
+comment3.params=i
+comment3.target=Candidato\ get(int)
+comment4.params=
+comment4.target=Nodo\ getCab()
+comment5.params=o
+comment5.target=boolean\ equals(java.lang.Object)
+numComments=6
