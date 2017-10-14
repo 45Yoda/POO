@@ -20,6 +20,7 @@ public class HotelStandard extends Hotel implements CartaoPontos{
         this.epocaAlta = hs.getEpocaAlta();
     }
     
+   
     public double precoQuarto(){
         return super.getPrecoQuarto() + (epocaAlta?20:0);
     }
