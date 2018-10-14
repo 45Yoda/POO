@@ -1,2 +1,2 @@
 # POO
-Fichas de POO resolvidas 2k17
+Fichas de POO resolvidas 2017
